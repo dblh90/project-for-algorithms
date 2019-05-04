@@ -1,25 +1,26 @@
 package sorting;
 
 /**
- * 
- * @author hamza
- *
+ * @author Hamza
  */
 public class SelectionSort {
 
 	/**
-	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
 
-		// 1.Take an array of numbers .. unordered!
-		// 2.Loop over the array, find the next index.
-		// 3.Look for the smallest value in the following indexes
-		// 4.Swap it with the current index
-		// 5.Repeat from 2-4.
+		//@formatter:off
+        /**
+         * 1.Take an array of numbers .. unordered!
+         * 2.Loop over the array, find the next index.
+         * 3.Look for the smallest value in the following indexes
+         * 4.Swap it with the current index
+         * 5.Repeat from 2-4.
+         */
+        //@formatter:on
 
-		int[] array = processStringArrayLine(args[0]);
+		int[] array = Utility.processStringArrayLine(args[0]);
 
 		System.out.println("Array before selection sort");
 		for (int i = 0; i < array.length; i++) {
@@ -51,15 +52,4 @@ public class SelectionSort {
 		}
 		System.out.println();
 	}
-
-	private static int[] processStringArrayLine(String array) {
-		String[] stringNums = array.split(",");
-		int[] intNums = new int[stringNums.length];
-
-		for (int index = 0; index < stringNums.length; index++) {
-			intNums[index] = Integer.parseInt(stringNums[index]);
-		}
-		return intNums;
-	}
-
 }
